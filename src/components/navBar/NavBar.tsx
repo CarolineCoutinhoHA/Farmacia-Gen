@@ -13,9 +13,9 @@ function Navbar() {
         </div>
 
         <div className='navbar-menu'>
-          <div className='navbar-item'>Postagens</div>
-          <div className='navbar-item'>Temas</div>
-          <div className='navbar-item'>Cadastrar tema</div>
+          <div className='navbar-item'>Produtos</div>
+          <div className='navbar-item'>Categorias</div>
+          <div className='navbar-item'>Meus Pedidos</div>
           <div className='navbar-item'>Perfil</div>
           <div className='navbar-item'>Sair</div>
         </div>
