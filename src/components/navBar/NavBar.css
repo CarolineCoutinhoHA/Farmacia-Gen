@@ -1,59 +1,22 @@
-/* Navbar.css */
+/* Estilos gerais para a barra de navegação */
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
 
-.navbar {
-    width: 100%;
-    background-color: #fbfeff; /* cor de fundo azul clarinho */
-    color: rgb(41, 11, 126); /* cor do texto */
-    padding: 1rem 0; /* padding vertical */
-    border: 2px solid #170772; /* borda ao redor do background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* sombra leve para destacar a borda */
-  }
-  
-  .navbar-container {
-    max-width: 1200px; /* ajuste conforme necessário */
-    margin: 0 auto; /* centraliza o container */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem; /* padding horizontal */
-    background-color: #fafeff; /* cor de fundo para o container, igual ao fundo da navbar */
-  }
-  
-  .navbar-title-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-logo {
-    width: 50px; /* ajuste o tamanho do logo conforme necessário */
-    height: 50px; /* ajuste o tamanho do logo conforme necessário */
-    margin-right: 0.5rem; /* espaço entre a imagem e o título, menor para ficar mais próximo */
-  }
-  
-  .navbar-title {
-    font-size: 1.5rem; /* ajuste conforme necessário */
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  .navbar-menu {
-    display: flex;
-    gap: 1rem; /* espaço entre itens do menu */
-  }
-  
-  .navbar-item {
-    cursor: pointer;
-    font-size: 1.2rem; /* aumenta o tamanho da fonte */
-    font-weight: bold; /* aumenta o peso da fonte */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* transição suave para a cor e borda */
-    border: 2px solid transparent; /* borda inicial invisível */
-    border-radius: 8px; /* borda arredondada */
-    padding: 0.5rem 1rem; /* espaço interno para a borda */
-    text-decoration: none; /* remove o sublinhado dos itens do menu */
-  }
-  
-  .navbar-item:hover, .navbar-item.active {
-    background-color: #ddfbff; /* fundo azul claro ao passar o cursor ou quando ativo */
-    border-color: #170772; /* cor da borda ao passar o cursor ou quando ativo */
-  }
-  
+/* Estilo para os links do menu */
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none; /* Remover o sublinhado dos links */
+  color: white; /* Cor do texto padrão */
+}
+
+/* Estilo para o fundo azul clarinho quando o mouse passa por cima */
+.nav-link:hover {
+  background-color: #e3f2fd; /* Azul bem clarinho */
+  color: #0d47a1; /* Cor do texto ao passar o mouse */
+}

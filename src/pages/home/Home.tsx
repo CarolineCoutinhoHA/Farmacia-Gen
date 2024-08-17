@@ -1,30 +1,40 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import homeLogo from '../../assets/img/balcaofarmacia.png';
 import './Home.css';
-
-
+import ListaPostagens from '../../components/postagens/listaPostagens/ListaPostagens';
+import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 function Home() {
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        navigate('/postagens'); // Altere '/postagens' para o caminho correto das suas postagens
+    };
+
     return (
         <>
-        <div className="bg-blue-900 flex justify-center">
-          <div className='container grid grid-cols-2 text-white'>
-            <div className="flex flex-col gap-4 items-center justify-center py-4">
-              <h2 className='text-5xl font-bold'>Bem Vindes </h2>
-              <p className='text-xl'>Mais que uma farmácia, seu porto seguro!</p>
-              <p className='text-xl'>Sua saúde é nossa prioridade.</p>
-              <div className="flex justify-around gap-4">
-              
-                <button className='rounded bg-white text-blue-800 py-2 px-4'>Ver postagens</button>
-              </div>
+            <div className="bg-blue-900 flex justify-center">
+                <div className='container text-white'>
+                    <div className="text-container">
+                        <h2 className='text-5xl font-bold'>Bem Vindes</h2>
+                        <p className='text-xl'>Mais que uma farmácia, seu porto seguro!</p>
+                        <p className='text-xl'>Sua saúde é nossa prioridade.</p>
+                        <div className="flex justify-center">
+                            <button 
+                                onClick={handleButtonClick} 
+                                className='rounded-full bg-white text-blue-800 py-2 px-6 hover:bg-green-600 hover:text-white transition duration-300 shadow-lg transform hover:scale-105'>
+                                Ver postagens
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="flex justify-center">
+                        <img src={homeLogo} alt="Logo da farmácia" className='w-full max-w-lg' />
+                    </div>
+                </div>
             </div>
-  
-            <div className="flex justify-center ">
-              <img src={homeLogo} alt="" className='w-2/3' />
-      
-            </div>
-          </div>
-        </div>
-      
-      </>
+            <ListaPostagens />
+        </>
     );
 }
 
